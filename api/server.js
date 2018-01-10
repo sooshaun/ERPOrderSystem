@@ -6,6 +6,7 @@ const port = 7000
 const express = require('express')
 const bodyParse = require('body-parser')
 const cors = require('cors')
+
 const authMiddleware = require('./middleware/auth')
 
 
@@ -18,12 +19,11 @@ server.use([
 ]
 )
 
-
 // To test whether the server is responding to the url, any none existing url will display the below error
 server.get('/', function (req, res) { res.send('Hello World....') })
 
 // Error handler
-server.use(function (req, res, next) { res.status(404); res.send("404 - not found"); })
+server.use(function (req, res, next) { res.status(404); res.send("404 - url not found / invalid url"); })
 
 // Error handler
 server.use((error, req, res, next) => {
