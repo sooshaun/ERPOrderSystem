@@ -4,7 +4,6 @@ import Landing from './Components/LandingPage'
 import Sidebar from './Components/Sidebar'
 import Footer from './Components/Footer'
 import Pager from './Components/Pager'
-import Map from './Components/Map'
 import SignInForm from './Components/SignInForm'
 import SignUpForm from './Components/SignUpForm'
 import Productlisting from './Components/Productlisting'
@@ -30,7 +29,7 @@ class App extends Component {
         <SignInForm />
         <SignUpForm />
 
-        <Map />
+
 
         <Delivery />
 

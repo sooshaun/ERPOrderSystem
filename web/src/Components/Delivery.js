@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import { Row, Col, Button } from 'antd';
+import Map from './MapUsingPosition'
 import { leftCol, rightCol } from '../style/Delivery.css'
+const { MarkerWithLabel } = require("react-google-maps/lib/components/addons/MarkerWithLabel");
 
 class Delivery extends Component {
 
@@ -72,7 +74,14 @@ class Delivery extends Component {
 
         <Row gutter={8} style={{ minHeight: '100vh' }}>
           <Col sm={12} md={16} className="leftCol">
-            <img src={'http://i.imgur.com/O2EOCxf.png'} alt={'Map Example'} />
+            {/* <img src={'http://i.imgur.com/O2EOCxf.png'} alt={'Map Example'} /> */}
+            <Map
+              isMarkerShown
+              googleMapURL="https://maps.googleapis.com/maps/api/js?v=3.exp&libraries=geometry,drawing,places"
+              loadingElement={<div style={{ height: `100%` }} />}
+              containerElement={<div style={{ height: `600px` }} />}
+              mapElement={<div style={{ height: `100%` }} />}
+            />
           </Col>
           {/* <Col sm={12} md={16}>
           </Col> */}

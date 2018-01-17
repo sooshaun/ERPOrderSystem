@@ -7,7 +7,7 @@ import { Pagination } from 'antd';
 const pager = () => {
   return (
     <Pagination
-      total={15}
+      total={30}
       showTotal={total => `Total ${total} items`}
       pageSize={20}
       defaultCurrent={1}
