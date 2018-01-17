@@ -1,13 +1,59 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import './style/App.css';
+import Landing from './Components/LandingPage'
+import Sidebar from './Components/Sidebar'
+import Footer from './Components/Footer'
+import Pager from './Components/Pager'
+import Productlisting from './Components/Productlisting'
+import Delivery from './Components/Delivery'
+import { Layout } from 'antd';
+const { Content } = Layout;
+
+
 
 class App extends Component {
+
+  state = {
+
+  };
+
+
   render() {
+
     return (
       <div className="App">
-        <h1>Hello World</h1>
-      </div>
+
+
+        <Delivery />
+
+
+        <Landing style={{ minHeight: '100vh' }} />
+
+
+
+
+        <Layout>
+          <Sidebar />
+
+          <Layout style={{ marginLeft: 0 }}>
+
+            <Content style={{ margin: '0', overflow: 'initial' }}>
+              <div style={{ padding: 20, background: '#fff', textAlign: 'center' }}>
+                <Productlisting />
+                <Productlisting />
+                <Productlisting />
+                <Productlisting />
+
+              </div>
+            </Content>
+            <Footer />
+          </Layout>
+        </Layout>
+
+
+
+
+      </div >
     );
   }
 }

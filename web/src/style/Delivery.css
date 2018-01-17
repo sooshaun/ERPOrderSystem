@@ -1,0 +1,25 @@
+.orderConfirmation {
+    background-color:#444;
+    text-align: center; 
+    }
+
+.orderConfirmationButton {
+    width: 300px;
+    height: 40px;
+    border: 3px solid #73AD21;
+}
+
+.height{
+    min-height: 500px;
+}
+.rightCol {
+    top: 5vh;
+    overflow-y: scroll;
+    background-color: #999;
+    color: white;
+    height: 600px;
+ }
+
+ .leftCol {
+    top: 10vh;
+  }
