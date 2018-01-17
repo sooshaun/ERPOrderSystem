@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import { Form, Input, Tooltip, Icon, Cascader, Select, Row, Col, Checkbox, Button, AutoComplete } from 'antd';
+import { Link } from 'react-router-dom'
 const FormItem = Form.Item;
 const Option = Select.Option;
 const AutoCompleteOption = AutoComplete.Option;
@@ -236,6 +237,7 @@ class RegistrationForm extends Component {
           </FormItem>
           <FormItem {...tailFormItemLayout}>
             <Button type="primary" htmlType="submit">Register</Button>
+            <Link to="/products" className="button">Register with Link</Link>
           </FormItem>
         </Form>
       </div>

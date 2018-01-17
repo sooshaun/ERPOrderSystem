@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { loginform, loginformbutton } from '../style/SignInForm.css'
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 const FormItem = Form.Item;
@@ -43,7 +44,8 @@ class NormalLoginForm extends Component {
             <Button type="primary" htmlType="submit" className="loginformbutton">
               Sign in
           </Button>
-            Or <a href="">register now!</a>
+            {/* Or <a href="">register now!</a> */}
+            Or <Link to="/signup">register now!</Link>
           </FormItem>
         </Form>
       </div>

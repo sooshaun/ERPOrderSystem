@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 import { Layout, Menu, Icon } from 'antd';
 const { Sider } = Layout;
 const SubMenu = Menu.SubMenu;
@@ -53,8 +54,8 @@ class Sidebar extends Component {
             title={<span><Icon type="team" /><span>Xiao Ping Guo</span></span>}
           >
             <Menu.Item key="4"> <Icon type="pie-chart" />DashBoard</Menu.Item>
-            <Menu.Item key="5"><Icon type="play-circle-o" />Production</Menu.Item>
-            <Menu.Item key="6"><Icon type="retweet" />Delivery</Menu.Item>
+            <Menu.Item key="5"><Link to='/products'><Icon type="play-circle-o" />Production</Link></Menu.Item>
+            <Menu.Item key="6"><Link to="/delivery"><Icon type="retweet" />Delivery</Link></Menu.Item>
             <Menu.Item key="7"><Icon type="book" />Account</Menu.Item>
             <Menu.Item key="8"><Icon type="user" />Admin Set Up</Menu.Item>
           </SubMenu>
@@ -69,7 +70,7 @@ class Sidebar extends Component {
           </SubMenu>
           <Menu.Item key="12"><Icon type="file" /><span>File</span></Menu.Item>
         </Menu>
-      </Sider>
+      </Sider >
 
     )
   }
