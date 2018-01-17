@@ -1,8 +1,10 @@
 import React, { Component } from 'react'
+import { loginform, loginformbutton } from '../style/SignInForm'
 import { Form, Icon, Input, Button, Checkbox } from 'antd';
 const FormItem = Form.Item;
 
-class SignInForm extends Component {
+
+class NormalLoginForm extends Component {
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
@@ -14,7 +16,7 @@ class SignInForm extends Component {
   render() {
     const { getFieldDecorator } = this.props.form;
     return (
-      <Form onSubmit={this.handleSubmit} className="login-form">
+      <Form onSubmit={this.handleSubmit} className="loginform">
         <FormItem>
           {getFieldDecorator('userName', {
             rules: [{ required: true, message: 'Please input your username!' }],
@@ -37,7 +39,7 @@ class SignInForm extends Component {
             <Checkbox>Remember me</Checkbox>
             )}
           <a className="login-form-forgot" href="">Forgot password</a>
-          <Button type="primary" htmlType="submit" className="login-form-button">
+          <Button type="primary" htmlType="submit" className="loginformbutton">
             Log in
           </Button>
           Or <a href="">register now!</a>
@@ -47,4 +49,6 @@ class SignInForm extends Component {
   }
 }
 
-export default SignInForm
+const WrappedNormalLoginForm = Form.create()(NormalLoginForm);
+
+export default WrappedNormalLoginForm 

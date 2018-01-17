@@ -4,6 +4,9 @@ import Landing from './Components/LandingPage'
 import Sidebar from './Components/Sidebar'
 import Footer from './Components/Footer'
 import Pager from './Components/Pager'
+import Map from './Components/Map'
+import SignInForm from './Components/SignInForm'
+import SignUpForm from './Components/SignUpForm'
 import Productlisting from './Components/Productlisting'
 import Delivery from './Components/Delivery'
 import { Layout } from 'antd';
@@ -24,6 +27,11 @@ class App extends Component {
       <div className="App">
 
 
+        <SignInForm />
+        <SignUpForm />
+
+        <Map />
+
         <Delivery />
 
 
@@ -43,7 +51,7 @@ class App extends Component {
                 <Productlisting />
                 <Productlisting />
                 <Productlisting />
-
+                <Pager />
               </div>
             </Content>
             <Footer />
