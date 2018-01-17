@@ -1,9 +1,31 @@
-#components-form-demo-normal-login .loginform {
-  max-width: 300px;
+.signIn{
+  width:500px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
 }
-#components-form-demo-normal-login .loginformforgot {
+
+.loginform {
+  max-width: 300px;
+  margin: auto;
+  padding: 20px;
+}
+.loginformforgot {
   float: right;
 }
-#components-form-demo-normal-login .loginformbutton {
+.loginformbutton {
   width: 100%;
+}
+
+
+.signUp{
+  width:500px;
+  margin: auto;
+  text-align: center;
+  padding: 20px;
+}
+
+
+.formWidth{
+  max-width: 300px;
 }
