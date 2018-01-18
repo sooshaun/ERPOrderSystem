@@ -10,6 +10,7 @@ import SignUpForm from './Components/SignUpForm'
 import Productlisting from './Components/Productlisting'
 import Delivery from './Components/Delivery'
 import PrimaryNav from './Components/PrimaryNav'
+import PageNotFound from './Components/PageNotFound'
 import { Layout } from 'antd';
 const { Content } = Layout;
 
@@ -28,7 +29,8 @@ class App extends Component {
 
       <Router>
         <div className="App">
-          <PrimaryNav />
+          {/* <PrimaryNav />      */}
+          {/* <= after you set up the Router/Switch/Route, you can start you go to any Component and having <Link='/url'></Link> */}
           <Switch>
 
             <Route path='/signin' exact render={() => (<Fragment>{
@@ -66,11 +68,15 @@ class App extends Component {
               </Layout>
             }</Fragment>)} />
 
-            <Route render={({ location }) => (<h2>Page not Found: {location.pathname} </h2>)} />
+            {/* <Route render={({ location }) => (<h2>Page not Found: {location.pathname} </h2>)} /> */}
+
+            <Route render={() => (<Fragment>{
+              < PageNotFound />
+            }</Fragment>)} />
 
           </Switch>
         </div >
-      </Router>
+      </Router >
     );
   }
 }
