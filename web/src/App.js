@@ -68,10 +68,17 @@ class App extends Component {
               </Layout>
             }</Fragment>)} />
 
+            {/* Three way of rendering Error page  */}
             {/* <Route render={({ location }) => (<h2>Page not Found: {location.pathname} </h2>)} /> */}
 
-            <Route render={() => (<Fragment>{
-              < PageNotFound />
+            {/* Since we are passing location, then we need to state props.location.pathname in the PageNotFound Components */}
+            {/* <Route render={({ location }) => (<Fragment>{
+              < PageNotFound location={location} />
+            }</Fragment>)} /> */}
+
+            {/* However, for consistency purpose, we have the attribute of the object stated here */}
+            <Route render={({ location }) => (<Fragment>{
+              < PageNotFound location={location.pathname} />
             }</Fragment>)} />
 
           </Switch>

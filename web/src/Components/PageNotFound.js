@@ -2,15 +2,9 @@ import React, { Component } from 'react'
 import { Link } from 'react-router-dom'
 
 
-// export default ((location) => (
-//   <h1>Page not found. {location.pathname}</h1>
-//   <Link to='/'>Click Here back to home page</Link>
-//   )
-// )
-
-const pageNotFound = () => {
+const pageNotFound = (props) => {
+  console.log(props.location.pathname)
   const page = {
-    // backgroundColor: '#888',
     margin: ' 100px auto',
     textAlign: 'center',
     width: '900px',
@@ -31,7 +25,9 @@ const pageNotFound = () => {
     < div style={page}>
       <h1 style={Ooops}>Ooops ! </h1>
       <h1 style={error}>Error 404.</h1>
-      <h2 style={error}>We are sorry. Page not found ! </h2>
+      {/* <h2 style={error}>We are sorry. Page not found ! : {props.location.pathname} </h2> */}
+      {/* If you are to place location.pathname in App.js page, then you can remove it become props.location */}
+      <h2 style={error}>We are sorry. Page not found ! : {props.location} </h2>
       <p style={error}>Please click <Link to='/'>here</Link> here to go back to homepage</p>
     </div >
   )
